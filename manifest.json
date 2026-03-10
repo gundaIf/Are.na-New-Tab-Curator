@@ -5,4 +5,5 @@
   "description": "Displays random blocks from your Are.na channel on new tabs.",
   "chrome_url_overrides": {"newtab": "newtab.html"},
   "permissions": ["storage"]
+  "options_page": "options.html"
 }
