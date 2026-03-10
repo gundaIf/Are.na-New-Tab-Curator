@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Are.na New Tab Curator",
+  "version": "1.0",
+  "description": "Displays random blocks from your Are.na channel on new tabs.",
+  "chrome_url_overrides": {"newtab": "newtab.html"},
+  "permissions": ["storage"]
+}
