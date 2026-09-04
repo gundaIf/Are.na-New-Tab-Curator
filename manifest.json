@@ -1,9 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Are.na New Tab Curator",
-  "version": "1.0",
-  "description": "Displays random blocks from your Are.na channel on new tabs.",
-  "chrome_url_overrides": {"newtab": "newtab.html"},
-  "permissions": ["storage"]
-  "options_page": "options.html"
+  "version": "2.0.0",
+  "description": "Replace new tab with a masonry of blocks from public Are.na channels.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://api.are.na/*",
+    "https://images.are.na/*",
+    "https://d2w9rnfcy7mm78.cloudfront.net/*"
+  ]
 }

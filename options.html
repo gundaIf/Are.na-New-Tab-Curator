@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head><title>Options</title></head>
-<body>
-  <label>Personal Access Token: <input id="token"></label><br>
-  <label>Channel ID: <input id="channelId"></label><br>
-  <button id="save">Save</button>
-  <script src="options.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Curator sources</title>
+    <style>
+      body { font: 14px/1.45 "Segoe UI", sans-serif; background: #0a0a0b; color: #f4f1ea; max-width: 520px; margin: 40px auto; padding: 0 16px; }
+      h1 { font-weight: 500; }
+      label { display: block; margin: 16px 0 6px; color: #9a958c; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+      input, textarea { width: 100%; background: #121214; color: #f4f1ea; border: 1px solid rgba(244,241,234,.14); border-radius: 8px; padding: 10px 12px; }
+      textarea { min-height: 120px; font-family: ui-monospace, monospace; }
+      button { margin-top: 16px; background: #c8ccd4; color: #0a0a0b; border: 0; border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+      p { color: #9a958c; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <h1>Sources</h1>
+    <p>Public channel slugs, one per line. Token is optional and only needed for private channels.</p>
+    <label for="channels">Channel slugs</label>
+    <textarea id="channels"></textarea>
+    <label for="token">Personal access token</label>
+    <input id="token" type="password" autocomplete="off" />
+    <button id="save" type="button">Save</button>
+    <p id="msg"></p>
+    <script src="options.js"></script>
+  </body>
 </html>

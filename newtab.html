@@ -1,5 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head><title>Are.na New Tab</title></head>
-<body><div id="block"></div><script src="newtab.js"></script></body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>New Tab</title>
+    <link rel="stylesheet" href="newtab.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Curator</h1>
+        <p id="clock"></p>
+      </div>
+      <div class="actions">
+        <button id="refresh" type="button">Refresh</button>
+        <button id="settings" type="button">Sources</button>
+      </div>
+    </header>
+    <main id="grid"></main>
+    <p id="status"></p>
+    <div id="viewer" hidden>
+      <button id="close" type="button" aria-label="Close">Close</button>
+      <img id="viewer-img" alt="" />
+      <blockquote id="viewer-text"></blockquote>
+      <nav>
+        <button id="prev" type="button">Prev</button>
+        <a id="open-arena" href="#" target="_blank" rel="noreferrer">Open on Are.na</a>
+        <button id="next" type="button">Next</button>
+      </nav>
+    </div>
+    <script src="newtab.js"></script>
+  </body>
 </html>
