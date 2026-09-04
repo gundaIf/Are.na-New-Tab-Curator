@@ -2,7 +2,7 @@
 
 Chrome extension (Manifest V3) that replaces the new tab page with a masonry of blocks from public Are.na channels.
 
-Version **2.0.0** — load unpacked. No account required for public channels.
+Version **2.0.1** — load unpacked. No account required for public channels.
 
 ![New Chrome tab showing Curator: a dark masonry of public image and text blocks, with Refresh and Sources in the header. Sample content only — no account, profile, or personal data.](docs/newtab.jpg)
 
@@ -41,12 +41,22 @@ Click a card for a fullscreen view. Arrow keys move between blocks, Esc closes, 
 
 ## Install (unpacked)
 
-1. Clone this repo, or unzip the [v2.0.0](https://github.com/gundaIf/Are.na-New-Tab-Curator/releases/tag/v2.0.0) archive
+1. Clone this repo, or unzip the [latest release](https://github.com/gundaIf/Are.na-New-Tab-Curator/releases/latest) archive
 2. Chrome → `chrome://extensions` → Developer mode → **Load unpacked**
 3. Select this folder
 4. Open a new tab
 
 Optional: extension **Details → Extension options**. One channel slug per line. Token from [are.na/settings/oauth](https://www.are.na/settings/oauth) only if you need private channels.
+
+## Brave / Chrome footer
+
+Chromium (Brave included) draws its own bar under any extension new tab: the extension name plus **Customise Brave** / **Customize Chrome**. That bar is not part of Curator.
+
+Hide it:
+
+1. Right-click the bar → **Hide footer on New Tab page**
+2. Or open **Customise Brave** → turn off **Show footer on New Tab page**
+3. Or `brave://flags` → search `NTP Footer` → Disabled → relaunch
 
 ## Notes
 

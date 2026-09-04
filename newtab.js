@@ -154,3 +154,30 @@ document.addEventListener("keydown", (e) => {
 loadFeed().catch((err) => {
   statusEl.textContent = err.message || "Could not load Are.na.";
 });
+
+const FOOTER_RE = /new-tab-footer|ntp-footer|ntp_footer|new_tab_footer/i;
+
+function isBrowserNtpFooter(el) {
+  if (!el || el.tagName !== "IFRAME") return false;
+  const src = `${el.getAttribute("src") || ""} ${el.src || ""} ${el.name || ""} ${el.id || ""}`;
+  if (FOOTER_RE.test(src)) return true;
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.height > 0 &&
+    rect.height <= 96 &&
+    rect.width >= window.innerWidth * 0.75 &&
+    rect.bottom >= window.innerHeight - 12
+  );
+}
+
+function stripBrowserNtpFooter() {
+  for (const el of document.querySelectorAll("iframe")) {
+    if (isBrowserNtpFooter(el)) el.remove();
+  }
+}
+
+stripBrowserNtpFooter();
+new MutationObserver(stripBrowserNtpFooter).observe(document.documentElement, {
+  childList: true,
+  subtree: true,
+});
