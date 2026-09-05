@@ -2,11 +2,11 @@
 
 Chrome extension (Manifest V3) that replaces the new tab page with a masonry of blocks from public Are.na channels.
 
-Version **2.0.1** — load unpacked. No account required for public channels.
+Version **2.0.1**. Load unpacked. No account required for public channels.
 
-![New Chrome tab showing Curator: a dark masonry of public image and text blocks, with Refresh and Sources in the header. Sample content only — no account, profile, or personal data.](docs/newtab.jpg)
+![New Chrome tab showing Curator: a dark masonry of public image and text blocks, with Refresh and Sources in the header. Sample content only. No account, profile, or personal data.](docs/newtab.jpg)
 
-*Sample first-run tab. Illustration only: architecture, objects, and landscape — no profiles, names, or private channels.*
+*Sample first-run tab. Illustration only: architecture, objects, and landscape. No profiles, names, or private channels.*
 
 ## What you see
 
@@ -18,7 +18,7 @@ Install, then open a new tab. Chrome’s default page is gone. There is no sign-
 - **Sources** opens options (channel slugs and an optional token)
 
 **Grid**
-A four-column masonry of recent public blocks — images, text, and links. Each card has a title and a type (`image` / `text` / `link`). Your tab shows whatever is in the channels you pick, not the sample tiles above.
+A four-column masonry of recent public blocks: images, text, and links. Each card has a title and a type (`image` / `text` / `link`). Your tab shows whatever is in the channels you pick, not the sample tiles above.
 
 On first run it pulls these public channels (no token):
 
